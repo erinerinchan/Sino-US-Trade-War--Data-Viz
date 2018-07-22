@@ -1,0 +1,2388 @@
+<!DOCTYPE HTML>
+<!--
+	Industrious by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+
+<head>
+    <title>Sino-China Trade War</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+    <script src="angular.js"></script>
+    <script src="angular.min.js"></script>
+    <!-- Angualr js script for body map -->
+    <script>
+        var dBexampleApp = angular.module('dBexampleApp', []).controller('dBcontroller', function($scope) {
+            $scope.AngdB = 0;
+
+            $scope.getAngdB = function() {
+                return $scope.AngdB;
+            };
+            $scope.dBchange = function() {
+                $scope.AngdB = parseInt($scope.AngdB);
+            }
+        });
+    </script>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    <style type="text/css">
+        /* No style rules here yet */
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+        <a class="logo" href="index.html">Industrious</a>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="elements.html">Elements</a></li>
+            <li><a href="generic.html">Generic</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="inner">
+            <center>
+                <h1>Sino-China Trade War</h1>
+                </br>
+                <p>What harms will be done to both countries?</p>
+                <p></p>
+            </center>
+        </div>
+        <img src="Sino-US.jpg" alt="" />
+    </section>
+
+    <div class="container">
+        <!-- Highlights -->
+        <section class="wrapper">
+            <div class="inner">
+
+                <p style="font-size:40px" object align="left"><b>Current situation of the Trade War</b></p>
+                </br>
+                <p style="font-size:18px">By 2018, The US ran a $375 billion merchandise trade deficit in China in 2017, currently the biggest trade deficit with China in US’s history, according to the US Census Bureau.</p>
+                </br>
+                <p style="font-size:18px">Studies found that, in the United States, about 87 percent of the tariffs paid on imports from China represent direct tariffs on Chinese value added, while 13 percent represent indirect tariffs paid on upstream inputs and their border
+                    costs.
+                </p>
+                </br>
+                <p style="font-size:18px">Since U.S. direct tariffs are lower than the world average, U.S. indirect tariffs constitute a more significant share of U.S. cumulative tariffs (about a third on average) than they do for the world (about a sixth on average).</p>
+                </br>
+                </br>
+                </br>
+
+                <body>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div id="container" style="height: 470% ; width:510%" object align="left"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("container");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = 'US Trade in Goods with China (2012 - 2018)';
+
+                                option = {
+                                    title: {
+                                        text: 'US Trade in Goods with China(2012 - 18, USD billion)',
+                                        subtext: 'Source: US Census Bureau'
+                                    },
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', ]
+                                    },
+                                    series: [{
+                                        name: 'Imports',
+                                        type: 'bar',
+                                        data: [425619, 440430, 468474, 483202, 462542, 505470, 161342]
+                                    }, {
+                                        name: 'Exports',
+                                        type: 'bar',
+                                        data: [110517, 121746, 123657, 115873, 115546, 129894, 42292]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+
+                        <div class="col-md-9">
+                            <div id="main" style="height: 105% ; width:580%"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("main");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = 'US Trade Deficit with China';
+
+                                option = {
+
+                                    title: {
+                                        text: 'Trade deficits between US and China (1985 - 2018, USD billion) ',
+                                        subtext: 'Source: US Census Bureau'
+                                    },
+
+                                    xAxis: {
+                                        type: 'category',
+                                        data: ['1985', '1986', '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018']
+                                    },
+                                    yAxis: {
+                                        type: 'value'
+                                    },
+                                    series: [{
+                                        data: [6, 1664.7, 2796.3, 3489.3, 6234.3, 10431, 12691, 18309, 22777, 29505, 33789, 39520.2, 49695.5, 56927.4, 68677.1, 83833, 83096, 103065, 124068.2, 162254.3, 202278, 234101.3, 258506, 268039.8, 226877, 273041.6, 295249.7, 315102.5, 318683.8, 344817.7, 367328.3, 346996.5, 375576.4, 119050.9],
+                                        type: 'line'
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+
+                        </div>
+                    </div>
+                </body>
+                </br>
+                </br>
+                </br>
+                </br>
+
+                <body>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div id="dummy" style="height: 460%; width:510%" object align="left"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("dummy");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = 'US top exports of good to China (2006 - 14, USD billion)';
+
+                                option = {
+                                    title: {
+                                        text: 'US exports of good to China (2006 - 2014, USD billion)',
+                                        subtext: 'Source: Oxford Economics'
+                                    },
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+                                    legend: {
+                                        data: ['2011年', '2012年']
+                                    },
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data: ['Furniture and Bedding', 'Clothing and Apparel', 'Financial and Insurance', 'Other Business Services', 'Light Manufacturing', 'Transport(Service)', 'Fuels, Metals and Minerals', 'Machinery', 'Chemicals and Pharmaceuticals', 'Miscellanous', 'Electronics', 'Food and Live Animals', 'Travel (including for education)', 'Transport']
+                                    },
+                                    series: [{
+                                        name: '2030',
+                                        type: 'bar',
+                                        data: [201, 549, 3305, 3504, 4331, 4950, 5921, 9199, 13515, 14764, 20428, 21165, 21499, 26114]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                        <div class="col-md-9">
+                            <div id="ice" style="height: 105% ; width: 700%"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("ice");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = '环形图';
+
+                                option = {
+
+                                    title: {
+                                        text: 'Top five categories of US exports to China (2017, USD billion)',
+                                        subtext: 'Source: US Census Bureau'
+                                    },
+
+                                    tooltip: {
+                                        trigger: 'item',
+                                        formatter: "{a} <br/>{b}: {c} ({d}%)"
+                                    },
+                                    legend: {
+                                        orient: 'vertical',
+                                        x: 'right',
+                                        data: ['Vehicles', 'Nuclear reactors, boilers and machinery', 'Electrical machinery, recording equipment', 'Air and spacecraft', 'Grain, seeds and straw']
+                                    },
+                                    series: [{
+                                        name: '访问来源',
+                                        type: 'pie',
+                                        radius: ['50%', '70%'],
+                                        avoidLabelOverlap: false,
+                                        label: {
+                                            normal: {
+                                                show: false,
+                                                position: 'center'
+                                            },
+                                            emphasis: {
+                                                show: true,
+                                                textStyle: {
+                                                    fontSize: '30',
+                                                    fontWeight: 'bold'
+                                                }
+                                            }
+                                        },
+                                        labelLine: {
+                                            normal: {
+                                                show: false
+                                            }
+                                        },
+                                        data: [{
+                                            value: 14.9,
+                                            name: 'Vehicles'
+                                        }, {
+                                            value: 14.6,
+                                            name: 'Nuclear reactors, boilers and machinery'
+                                        }, {
+                                            value: 12.4,
+                                            name: 'Electrical machinery, recording equipment'
+                                        }, {
+                                            value: 11.4,
+                                            name: 'Air and spacecraft'
+                                        }, {
+                                            value: 11,
+                                            name: 'Grain, seeds and straw'
+                                        }]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </body>
+                </br>
+                </br>
+                </br>
+                </br>
+                <p style="font-size:40px" object align="left"><b>History behind Sino-US trade war</b></p>
+
+
+                </br>
+                </br>
+                </br>
+                <p style="font-size:18px">
+                    As a result Donald Trump has seized on averting the trade deficit - pushing Beijing to level up the playing field for America.
+                </p>
+                </br>
+                </br>
+                </br>
+                <p style="font-size:40px" object align="left"><b>Chinese exports levied by the US?</b></p>
+                </br>
+                <p style="font-size:18px" object align="left">
+                    Trump's new tariff is on top of 25% levy on US$34 billion of Chinese exports announced on 16 June, which has gone effect since 6 July.
+                </p>
+                </br>
+
+                <div id="box" style="height: 600%" object align="left"></div>
+                <script type="text/javascript">
+                    var dom = document.getElementById("box");
+                    var myChart = echarts.init(dom);
+                    var app = {};
+                    option = null;
+                    option = {
+
+                        title: {
+                            text: 'US imposes tariffs on $34 million of Chinese goods (starting July 6, 2018)',
+                            subtext: 'US International Trade Commission'
+                        },
+
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            left: 'left',
+                            data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+                        },
+                        series: [{
+                            name: '访问来源',
+                            type: 'pie',
+                            radius: '50%',
+                            center: ['40%', '40%'],
+                            data: [
+
+                                {
+                                    value: 717000000,
+                                    name: 'Air, vaccum and pumps'
+                                }, {
+                                    value: 749000000,
+                                    name: 'Harvesting machines'
+                                }, {
+                                    value: 759000000,
+                                    name: 'Medical instruments'
+                                }, {
+                                    value: 804000000,
+                                    name: 'Radar, radio navigation'
+                                }, {
+                                    value: 812000000,
+                                    name: 'Electric motors, generators'
+                                }, {
+                                    value: 821000000,
+                                    name: 'Radio TV transmission'
+                                }, {
+                                    value: 828000000,
+                                    name: 'Automatic regulators'
+                                }, {
+                                    value: 905000000,
+                                    name: 'Taps, cocks, valves'
+                                }, {
+                                    value: 1100000000,
+                                    name: 'Insulated wire, cable'
+                                }, {
+                                    value: 1100000000,
+                                    name: 'Centrifuges'
+                                }, {
+                                    value: 1300000000,
+                                    name: 'Diodes, transistors'
+                                }, {
+                                    value: 1500000000,
+                                    name: 'Printing Machinery'
+                                }, {
+                                    value: 1600000000,
+                                    name: 'Machine parts for industrial equipment'
+                                }, {
+                                    value: 1700000000,
+                                    name: 'Pumps for liquids'
+                                }, {
+                                    value: 1700000000,
+                                    name: 'Under 1000 volt apparatus for switching or protecting circuits'
+                                }, {
+                                    value: 3500000000,
+                                    name: 'Passenger cars and vehicles(excluding public transport)'
+                                }
+                            ],
+                            itemStyle: {
+                                emphasis: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                }
+                            }
+                        }]
+                    };;
+                    if (option && typeof option === "object") {
+                        myChart.setOption(option, true);
+                    }
+                </script>
+                <p style="font-size:18px">
+                    Trump has later directed US Trade Representative Robert Lighthizer to start drawing a list of Chinese products that costs US$ 16 billion to be covered by the 10 percent tariff.
+                </p>
+                </br>
+                <p style="font-size:18px">
+                    The US trade representative’s final list includes 1102 product lines, down from above 1,300 initially, mainly focused on China’s Made in 2025 plan to become dominant in high-technology industries such as robotics, aerospace, industrial machinery and automobiles.
+                    Consumer goods including mobile phones and televisions aren’t being subjected to the tariffs.
+                </p>
+                </br>
+                <p style="font-size:18px">
+                    Meanwhile, the changes to the list seem designed to ensure that Americans still have easy access to weapons.Telescopic sights for machines and appliances will now face a 25% tariff—those used for rifles and “other arms” are no longer included. In fact,
+                    the whole sweeping range of weaponry included in the April list has now been cut. Americans will still be able to enjoy duty-free prices on Chinese rocket launchers, flame-throwers, shotguns, ammunition, pistols, grenade launchers
+                    and imports classified as “bombs, grenades, torpedoes, mines, missiles and similar munitions of war.”
+                </p>
+                </br>
+                </br>
+
+                <p style="font-size:18px" object align="left"><b>Number of Steel Mill Trade Remedies in Effect Against China (Top 6 countries)</b></p>
+                </br>
+                <p style="font-size:15px">Source: International Trade Administration</p>
+                </br>
+                <div class="row">
+                    <style>
+                        .chart .legend {
+                            fill: black;
+                            font: 14px sans-serif;
+                            text-anchor: start;
+                            font-size: 12px;
+                        }
+                        
+                        .chart text {
+                            fill: white;
+                            font: 10px sans-serif;
+                            text-anchor: end;
+                        }
+                        
+                        .chart .label {
+                            fill: black;
+                            font: 14px sans-serif;
+                            text-anchor: end;
+                        }
+                        
+                        .bar:hover {
+                            fill: brown;
+                        }
+                        
+                        .axis path,
+                        .axis line {
+                            fill: none;
+                            stroke: #000;
+                            shape-rendering: crispEdges;
+                        }
+                    </style>
+                    <svg class="chart"></svg>
+                    <script src="http://d3js.org/d3.v3.min.js"></script>
+                    <script>
+                        var data = {
+                            labels: [
+                                'United States', 'Canada', 'European Union',
+                                'Thailand', 'Brazil', 'Mexico'
+                            ],
+                            series: [{
+                                label: 'Anti-dumping duties',
+                                values: [14, 10, 10, 10, 9, 7]
+                            }, {
+                                label: 'Countervailing duties',
+                                values: [10, 8, 1, 0, 0, 0]
+                            }, ]
+                        };
+
+                        var chartWidth = 370,
+                            barHeight = 25,
+                            groupHeight = barHeight * data.series.length,
+                            gapBetweenGroups = 10,
+                            spaceForLabels = 150,
+                            spaceForLegend = 200;
+
+                        // Zip the series data together (first values, second values, etc.)
+                        var zippedData = [];
+                        for (var i = 0; i < data.labels.length; i++) {
+                            for (var j = 0; j < data.series.length; j++) {
+                                zippedData.push(data.series[j].values[i]);
+                            }
+                        }
+
+                        // Color scale
+                        var color = d3.scale.category20();
+                        var chartHeight = barHeight * zippedData.length + gapBetweenGroups * data.labels.length;
+
+                        var x = d3.scale.linear()
+                            .domain([0, d3.max(zippedData)])
+                            .range([0, chartWidth]);
+
+                        var y = d3.scale.linear()
+                            .range([chartHeight + gapBetweenGroups, 0]);
+
+                        var yAxis = d3.svg.axis()
+                            .scale(y)
+                            .tickFormat('')
+                            .tickSize(0)
+                            .orient("left");
+
+                        // Specify the chart area and dimensions
+                        var chart = d3.select(".chart")
+                            .attr("width", spaceForLabels + chartWidth + spaceForLegend)
+                            .attr("height", chartHeight);
+
+                        // Create bars
+                        var bar = chart.selectAll("g")
+                            .data(zippedData)
+                            .enter().append("g")
+                            .attr("transform", function(d, i) {
+                                return "translate(" + spaceForLabels + "," + (i * barHeight + gapBetweenGroups * (0.5 + Math.floor(i / data.series.length))) + ")";
+                            });
+
+                        // Create rectangles of the correct width
+                        bar.append("rect")
+                            .attr("fill", function(d, i) {
+                                return color(i % data.series.length);
+                            })
+                            .attr("class", "bar")
+                            .attr("width", x)
+                            .attr("height", barHeight - 1);
+
+                        // Add text label in bar
+                        bar.append("text")
+                            .attr("x", function(d) {
+                                return x(d) - 3;
+                            })
+                            .attr("y", barHeight / 2)
+                            .attr("fill", "red")
+                            .attr("dy", ".35em")
+                            .text(function(d) {
+                                return d;
+                            });
+
+                        // Draw labels
+                        bar.append("text")
+                            .attr("class", "label")
+                            .attr("x", function(d) {
+                                return -10;
+                            })
+                            .attr("y", groupHeight / 2)
+                            .attr("dy", ".35em")
+                            .text(function(d, i) {
+                                if (i % data.series.length === 0)
+                                    return data.labels[Math.floor(i / data.series.length)];
+                                else
+                                    return ""
+                            });
+
+                        chart.append("g")
+                            .attr("class", "y axis")
+                            .attr("transform", "translate(" + spaceForLabels + ", " + -gapBetweenGroups / 2 + ")")
+                            .call(yAxis);
+
+                        // Draw legend
+                        var legendRectSize = 18,
+                            legendSpacing = 4;
+
+                        var legend = chart.selectAll('.legend')
+                            .data(data.series)
+                            .enter()
+                            .append('g')
+                            .attr('transform', function(d, i) {
+                                var height = legendRectSize + legendSpacing;
+                                var offset = -gapBetweenGroups / 2;
+                                var horz = spaceForLabels + chartWidth + 40 - legendRectSize;
+                                var vert = i * height - offset;
+                                return 'translate(' + horz + ',' + vert + ')';
+                            });
+
+                        legend.append('rect')
+                            .attr('width', legendRectSize)
+                            .attr('height', legendRectSize)
+                            .style('fill', function(d, i) {
+                                return color(i);
+                            })
+                            .style('stroke', function(d, i) {
+                                return color(i);
+                            });
+
+                        legend.append('text')
+                            .attr('class', 'legend')
+                            .attr('x', legendRectSize + legendSpacing)
+                            .attr('y', legendRectSize - legendSpacing)
+                            .text(function(d) {
+                                return d.label;
+                            });
+                    </script>
+                </div>
+                </br>
+                </br>
+                </br>
+                </br>
+                <p style="font-size:40px" object align="left"><b>Chinese exports exempted from the US tariffs?</b></p>
+                </br>
+                <p style="font-size:18px">
+                    In June 2018, Donald Trump lifted 515 items from its original list of Chinese exports that was supposed to be subjected to 25% tariffs, ranging from vaccines, defibrillators, chemical contraceptives, diagnostic tests, dental fillings, hearing aids, and
+                    hormones- a hint at just how China depend Hint at just how much the US depends upon China for health-related products.
+                </p>
+                </br>
+                </br>
+                <p style="font-size:18px"><b>Examples of interesting Chinese exports that were lifted from Trump's tariff list</b></p>
+                <p style="font-size:15px">Source: Quartz</p>
+
+                <div class="row">
+                    <img src="images/d3.png" style="height:760px" object align="left">
+                </div>
+                </br>
+                <p style="font-size:40px"><b>China's retaliation on US's tariffs?</b></p>
+                </br>
+                <p style="font-size:18px">
+                    In April, China started levying additional taxes on American fruit, nuts, pork and wine in response to President Trump’s tariffs on steel and aluminium.
+                </p>
+                </br>
+                <p style="font-size:18px">
+                    Products affected included soyabean, corn, wheat, rice, beef, pork, poultry, fish, diary products, nuts and vegetables.
+                </p>
+                </br>
+                </br>
+
+                <body>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div id="ace" style="height: 500%; width:650%" object align="left"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("ace");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = '环形图';
+
+                                option = {
+
+                                    title: {
+                                        text: 'Percentage of tariff imposed on American exports by China',
+                                        subtext: 'Source: Ministry of Commerce of China, Quartz'
+                                    },
+
+                                    tooltip: {
+                                        trigger: 'item',
+                                        formatter: "{a} <br/>{b}: {c} ({d}%)"
+                                    },
+                                    legend: {
+                                        orient: 'vertical',
+                                        x: 'right',
+                                        data: ['Fruits', 'Meat and seafood', 'Soyabean', 'Wine', 'Modified ethanol', 'Ginseng', 'Stainless steel pipes']
+                                    },
+                                    series: [{
+                                        name: '访问来源',
+                                        type: 'pie',
+                                        radius: ['50%', '70%'],
+                                        avoidLabelOverlap: false,
+                                        label: {
+                                            normal: {
+                                                show: false,
+                                                position: 'center'
+                                            },
+                                            emphasis: {
+                                                show: true,
+                                                textStyle: {
+                                                    fontSize: '30',
+                                                    fontWeight: 'bold'
+                                                }
+                                            }
+                                        },
+                                        labelLine: {
+                                            normal: {
+                                                show: false
+                                            }
+                                        },
+                                        data: [{
+                                            value: 15,
+                                            name: 'Fruits'
+                                        }, {
+                                            value: 25,
+                                            name: 'Meat and seafood'
+                                        }, {
+                                            value: 25,
+                                            name: 'Soyabean'
+                                        }, {
+                                            value: 15,
+                                            name: 'Wine'
+                                        }, {
+                                            value: 15,
+                                            name: 'Modified ethanol'
+                                        }, {
+                                            value: 15,
+                                            name: 'Ginseng'
+                                        }, {
+                                            value: 15,
+                                            name: 'Stainless steel pipes'
+                                        }]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="moon" style="height: 85%; width:400%"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("moon");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = '世界人口总量 - 条形图';
+
+                                option = {
+                                    title: {
+                                        text: 'Top soybean producing US states (2017, USD million)',
+                                        subtext: 'Source: US Departmnet of Agriculture'
+                                    },
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+                                    legend: {
+                                        data: ['2017', '']
+                                    },
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data: ['Kansas', 'North Dakota', 'South Dakota', 'Ohio', 'Missouri', 'Indiana', 'Nebraska', 'Minnesota', 'Iowa', 'Illinois']
+                                    },
+                                    series: [{
+                                        name: '2011年',
+                                        type: 'bar',
+                                        data: [189.1, 239.7, 241.2, 252, 289.6, 320.8, 326, 380.2, 561.6, 611.9]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div id="tea" style="height: 550% ; width: 950%" object align="left"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("tea");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                option = {
+                                    title: {
+                                        text: ' American fruit products levied by China since April(15% tariff)',
+                                        subtext: 'Source: Quartz'
+                                    },
+                                    series: [{
+                                        type: 'treemap',
+                                        data: [{
+                                            name: 'Fruits and nuts', // First tree
+                                            value: 100,
+                                            children: [{
+                                                name: 'Dried coconut', // First leaf of first tree
+                                                value: 2
+                                            }, {
+                                                name: 'Coconut without inner shell', // Second leaf of first tree
+                                                value: 2
+                                            }, {
+                                                name: 'Other coconut',
+                                                value: 2
+                                            }, {
+                                                name: 'Unhulled Brazillan nuts',
+                                                value: 2
+                                            }, {
+                                                name: 'Shelled Brazillian nuts',
+                                                value: 2
+                                            }, {
+                                                name: 'Unshelled cashews',
+                                                value: 2
+                                            }, {
+                                                name: 'Shelled cashew',
+                                                value: 2
+                                            }, {
+                                                name: 'Hazelnuts',
+                                                value: 2
+                                            }, {
+                                                name: 'Unshelled hazelnuts',
+                                                value: 2
+                                            }, {
+                                                name: 'Unshelled walnuts',
+                                                value: 2
+                                            }, {
+                                                name: 'Walnut kernels',
+                                                value: 2
+                                            }, {
+                                                name: 'Unhulled chesnuts',
+                                                value: 2
+                                            }, {
+                                                name: 'Other shelled chesnuts',
+                                                value: 2
+                                            }, {
+                                                name: 'Unhulled pistacchio fruit',
+                                                value: 2
+                                            }, {
+                                                name: 'Hulled pistacchio fruit',
+                                                value: 2
+                                            }, {
+                                                name: 'Other unhulled macadamia nuts',
+                                                value: 2
+                                            }, {
+                                                name: 'Betel nut fruit',
+                                                value: 2
+                                            }, {
+                                                name: 'Pine nuts',
+                                                value: 2
+                                            }, {
+                                                name: 'Other fresh and dried nuts',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh and dried dates',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh and dried figs',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh and dried pineapple',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh and dried avocado',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh and dried guava',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh and dried mango',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh and dried mangosteen',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh and dried orange',
+                                                value: 2
+                                            }, {
+                                                name: 'Other citrus',
+                                                value: 2
+                                            }, {
+                                                name: 'Clementine orange',
+                                                value: 2
+                                            }, {
+                                                name: 'Virgin orange',
+                                                value: 2
+                                            }, {
+                                                name: 'Grapefruit, including Pomelo',
+                                                value: 2
+                                            }, {
+                                                name: 'Lemons and limes',
+                                                value: 2
+                                            }, {
+                                                name: 'Unlisted citrus fruits',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh grapes',
+                                                value: 2
+                                            }, {
+                                                name: 'Raisins',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh watermelon',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh cantaloupe',
+                                                value: 2
+                                            }, {
+                                                name: 'Papaya',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh apples',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh pears and pears',
+                                                value: 2
+                                            }, {
+                                                name: 'Other fresh pears',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh sour cherries',
+                                                value: 2
+                                            }, {
+                                                name: 'Other fresh cherries',
+                                                value: 2
+                                            }, {
+                                                name: 'Peaches, including nectarines',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh plum and prunes',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh strawberries',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh raspherry',
+                                                value: 2
+                                            }, {
+                                                name: 'Kiwi',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh durian',
+                                                value: 2
+                                            }, {
+                                                name: 'Persimmon',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh lynchee',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh longan',
+                                                value: 2
+                                            }, {
+                                                name: 'Rambutan',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh sweet lychee',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh carambola',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh lotus fog',
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh pitaya',
+                                                value: 2
+                                            }, {
+                                                name: 'Fruits not listed',
+                                                value: 2
+                                            }, {
+                                                name: 'Frozen strawberries',
+                                                value: 2
+                                            }, {
+                                                name: 'Frozen raspherries, blackberries, mulberries, rose hips',
+                                                value: 2
+                                            }, {
+                                                name: 'Frozen fruits and nuts',
+                                                value: 2
+                                            }, {
+                                                name: 'Temporarily preserved fruits and nuts',
+                                                value: 2
+                                            }, {
+                                                name: 'Other temporarily preserved fruits and nuts',
+                                                value: 2
+                                            }, {
+                                                name: 'Dried apricots',
+                                                value: 2
+                                            }, {
+                                                name: 'Dried apples',
+                                                value: 2
+                                            }, {
+                                                name: 'Dried longan and pulp',
+                                                value: 2
+                                            }, {
+                                                name: 'Dried persimmons',
+                                                value: 2
+                                            }, {
+                                                name: 'Red dates',
+                                                value: 2
+                                            }, {
+                                                name: 'Dried lychee',
+                                                value: 2
+                                            }, {
+                                                name: 'Unlisted dried fruit',
+                                                value: 2
+                                            }, {
+                                                name: 'Assorted nuts and dried fruits'
+                                            }]
+                                        }, {
+                                            name: 'nodeB', // Second tree
+                                            value: 0,
+                                            children: [{
+                                                name: 'nodeBa', // Son of first tree
+                                                value: 0,
+                                                children: [{
+                                                    name: '', // Granson of first tree
+                                                    value: 2,
+
+                                                }]
+                                            }]
+                                        }]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div id="advance" style="height: 600% ; width: 1000%" object align="left"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("advance");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                option = {
+                                    title: {
+                                        text: 'Stainless steel pipes levied by China since April(15% tariff)',
+                                        subtext: ' Source: Quartz'
+                                    },
+                                    series: [{
+                                        type: 'treemap',
+                                        data: [{
+                                            name: 'Stainless steel pipes', // First tree
+                                            value: 100,
+                                            children: [{
+                                                name: 'Stainless steel oil and gas pipeline pipe >= 215.9mm and <= 406.4mm', // First leaf of first tree
+                                                value: 2
+                                            }, {
+                                                name: 'Stainless steel oil and gas pipeline pipe >= 114.3mm and <= 215.9mm', // Second leaf of first tree
+                                                value: 2
+                                            }, {
+                                                name: 'Stainless steel oil and gas pipeline pipe > 406.4mm',
+                                                value: 2
+                                            }, {
+                                                name: 'Stainless steel oil and gas pipeline pipe >= 215.9mm and <=406.4mm',
+                                                value: 2
+                                            }, {
+                                                name: 'Pipes for other steel, oil and gas pipelines <=114.3mm',
+                                                value: 2
+                                            }, {
+                                                name: 'Stainless steel oil and gas pipeline pipe > 406. 4mm',
+                                                value: 2
+                                            }, {
+                                                name: 'Other steel oil and gas seamless pipe <=168.3mm',
+                                                value: 2
+                                            }, {
+                                                name: 'Oil and gas drilling pipes made of stainless steel >168.3mm',
+                                                value: 2
+                                            }, {
+                                                name: 'Seamless casing and conduits for drilled petroleum or natural gas made of stainless steel',
+                                                value: 2
+                                            }, {
+                                                name: 'Other seamless steel casings for oil and gas drilling with a yield strength of less than 552 MPa catheter',
+                                                value: 2
+                                            }, {
+                                                name: 'Other steel drilling oils with a yield strength of 552 MPa or more but less than 758 MPa and seamless casing and conduits for natural gas',
+                                                value: 2
+                                            }, {
+                                                name: 'Seameless boiler tubes for cold drawn or cold rolled iron or ordinary steel',
+                                                value: 2
+                                            }, {
+                                                name: 'Seamless sets for oil and gas drilling of other steels with a yield strength of 758 MPa or more Tubes, catheters',
+                                                value: 2
+                                            }, {
+                                                name: 'Seamless boiler tubes for cold drawn or cold rolled iron or ordinary steel ',
+                                                value: 2
+                                            }, {
+                                                name: 'Seamless or cold-rolled iron or common steel seamless geologic drill pipe, casing',
+                                                value: 2
+                                            }, {
+                                                name: 'Non-cold drawn or cold-rolled iron or plain steel seamless circular cross-section tubes, not else where specified',
+                                                value: 2
+                                            }, {
+                                                name: 'Cold-drawn or cold-rolled other alloy steel',
+                                                value: 2
+                                            }, {
+                                                name: 'Seamless steel alloys, cold drawn or cold rolled',
+                                                value: 2
+                                            }, {
+                                                name: 'Unalloyed cold-drawn or cold-rolled alloy steel seamless circular cross-section tubes',
+                                                value: 2
+                                            }, {
+                                                name: 'Other alloy steel seamless boiler tubes, not drawn or cold-rolled',
+                                                value: 2
+                                            }, {
+                                                name: 'Non-cold drawn or cold-rolled seamless steel tubes and casings for other alloy steels',
+                                                value: 2
+                                            }, {
+                                                name: 'Non-cold drawn or cold rolled alloy steel seamless circular cross-section tubes',
+                                                value: 2
+                                            }, {
+                                                name: 'Other seamless steel tubes and hollow profiles',
+                                                value: 2
+
+                                            }]
+                                        }, {
+                                            name: 'nodeB', // Second tree
+                                            value: 0,
+                                            children: [{
+                                                name: 'nodeBa', // Son of first tree
+                                                value: 0,
+                                                children: [{
+                                                    name: '', // Granson of first tree
+                                                    value: 2,
+
+                                                }]
+                                            }]
+                                        }]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    <div clas="row">
+                        <div class="col-md-9">
+                            <div id="haze" style="height: 600%; width:87%" object align="left"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("haze");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                option = {
+                                    title: {
+                                        text: 'American pork products levied by China since April(25% tariff)',
+                                        subtext: 'Source: Quartz'
+                                    },
+                                    series: [{
+                                        type: 'treemap',
+                                        data: [{
+                                            name: 'Pork products', // First tree
+                                            value: 20,
+                                            children: [{
+                                                name: 'Fresh and cold boned pig forelegs, hindquarters and their meat', // First leaf of first tree
+                                                value: 2
+                                            }, {
+                                                name: 'Other fresh and cold pork', // Second leaf of first tree
+                                                value: 2
+                                            }, {
+                                                name: 'Other frozen whole head and half pork',
+                                                value: 2
+                                            }, {
+                                                name: 'Frozen bone forelegs, pigs legs and their meat',
+                                                value: 2
+                                            }, {
+                                                name: 'Other frozen pork',
+                                                value: 2
+                                            }, {
+                                                name: 'Frozen pork liver',
+                                                value: 2
+                                            }, {
+                                                name: 'Other frozen pork chops',
+                                                value: 2
+                                            }, {}]
+                                        }, {
+                                            name: 'nodeB', // Second tree
+                                            value: 0,
+                                            children: [{
+                                                name: 'nodeBa', // Son of first tree
+                                                value: 0,
+                                                children: [{
+                                                    name: 'nodeBa1', // Granson of first tree
+                                                    value: 0
+                                                }]
+                                            }]
+                                        }]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    </br>
+                    </br>
+                    </br>
+
+                    <div clas="row">
+                        <div class="col-md-9">
+                            <div id="daze" style="height: 600%; width:87%" object align="left"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("daze");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                option = {
+                                    title: {
+                                        text: ' American wine levied by China since April (15% tariff)',
+                                        subtext: 'Quartz'
+                                    },
+                                    series: [{
+                                        type: 'treemap',
+                                        data: [{
+                                            name: 'Wine', // First tree
+                                            value: 20,
+                                            children: [{
+                                                name: 'Sparkling wine', // First leaf of first tree
+                                                value: 2
+                                            }, {
+                                                name: 'Fresh brewed wine < 2L', // Second leaf of first tree
+                                                value: 2
+                                            }, {
+                                                name: 'Wines brewed with other grapes < 10L',
+                                                value: 2
+                                            }, {
+                                                name: 'Wines brewed with other grapes > 10L',
+                                                value: 2
+                                            }, {
+                                                name: 'Other items from grape juice wine',
+                                                value: 2
+                                            }, {
+                                                name: 'Modified ethanol',
+                                                value: 2
+                                            }, {}]
+                                        }, {
+                                            name: 'nodeB', // Second tree
+                                            value: 0,
+                                            children: [{
+                                                name: 'nodeBa', // Son of first tree
+                                                value: 0,
+                                                children: [{
+                                                    name: 'nodeBa1', // Granson of first tree
+                                                    value: 0
+                                                }]
+                                            }]
+                                        }]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    <p style="font-size:40px" object align="left"><b>Top five categories of exports to each country?</b></p>
+                    </br>
+
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div id="dab" style="height: 500%; width:800%" object align="left"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("dab");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                option = {
+                                    title: {
+                                        text: 'Top five categories of US exports to China (2017, US thousands of dollars)',
+                                        subtext: ' Source:US Census Bureau '
+                                    },
+                                    tooltip: {
+                                        trigger: 'item',
+                                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                                    },
+                                    legend: {
+                                        orient: 'vertical',
+                                        left: 'left',
+                                        data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+                                    },
+                                    series: [{
+                                        name: '访问来源',
+                                        type: 'pie',
+                                        radius: '50%',
+                                        center: ['40%', '40%'],
+                                        data: [{
+                                            value: 5447303,
+                                            name: 'Industrial machines and others'
+                                        }, {
+                                            value: 6076509,
+                                            name: 'Semiconductors'
+                                        }, {
+                                            value: 10211268,
+                                            name: 'Passenger cars, new and used'
+                                        }, {
+                                            value: 12258835,
+                                            name: 'Soybeans'
+                                        }, {
+                                            value: 16264533,
+                                            name: 'Civilian aircraft, engines, equipment'
+                                        }],
+                                        itemStyle: {
+                                            emphasis: {
+                                                shadowBlur: 10,
+                                                shadowOffsetX: 0,
+                                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                            }
+                                        }
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div id="abc" style="height: 500%; width:800%" object align="left"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("abc");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                option = {
+                                    title: {
+                                        text: 'Top five categories of Chinese exports to the US (2017, US thousands of dollars)',
+                                        subtext: ' Source:US Census Bureau '
+                                    },
+                                    tooltip: {
+                                        trigger: 'item',
+                                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                                    },
+                                    legend: {
+                                        orient: 'vertical',
+                                        left: 'left',
+                                        data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+                                    },
+                                    series: [{
+                                        name: '访问来源',
+                                        type: 'pie',
+                                        radius: '50%',
+                                        center: ['40%', '40%'],
+                                        data: [{
+                                            value: 70359818,
+                                            name: 'Cell phones and other household goods'
+                                        }, {
+                                            value: 45515206,
+                                            name: 'Computers'
+                                        }, {
+                                            value: 33490521,
+                                            name: 'Telecommunication equipment'
+                                        }, {
+                                            value: 31648577,
+                                            name: 'Computer accessories'
+                                        }, {
+                                            value: 26751412,
+                                            name: 'Toys, games and sporting goods'
+                                        }],
+                                        itemStyle: {
+                                            emphasis: {
+                                                shadowBlur: 10,
+                                                shadowOffsetX: 0,
+                                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                            }
+                                        }
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    </br>
+                    <p style="font-size:40px"><b>Actual shares of "Chinese" products levied by the US?</b></p>
+                    </br>
+                    <p style="font-size:18px">
+                        For instance, computers and electronics, less than half of the value added in Chinese exports come from China.
+                    </p>
+                    </br>
+                    <p style="font-size:18px">
+                        The rest of the value-added imported from other countries, including the United States.
+                    </p>
+                    </br>
+                    <p style="font-size:18px">
+                        It should be noted that these industry classification are quite broad. Within computers and electronic equipment, there is a fast array of different products.
+                    </p>
+                    </br>
+                    <p style="font-size:18px">
+                        I.e. some of the products exported from China have very little domestic value-added, less than 10 percent
+                    </p>
+                    </br>
+                    </br>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div id="cake" style="height: 500%; width:750%" object align="left"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("cake");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = '世界人口总量 - 条形图';
+
+                                option = {
+                                    title: {
+                                        text: 'Value-added structure of U.S. imports from China (2014, USD billion)',
+                                        subtext: 'The Brookings Institutions'
+                                    },
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+                                    legend: {
+                                        data: ['', ''],
+                                        x: 'right',
+                                    },
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data: ['Agriculture', 'Mining', 'Food products', 'Textiles', 'Wood products', 'Paper products', 'Refined Petroleum products', 'Chemicals', 'Rubber and plastic products', 'Non-metallic mineral products', 'Basic metals', 'Fabricated metal products', 'Machinery and equipment', 'Computer, electronic equipment', 'Electrical machinery', 'Motor machinery', 'Other Transport equipment', 'Manufacturing not elsewhere classified']
+                                    },
+                                    series: [{
+                                        name: 'Foreign value added',
+                                        type: 'bar',
+                                        data: [0, 0, 1, 15, 1, 2, 1, 6, 6, 1, 1, 5, 11, 89, 13, 4, 1, 4]
+                                    }, {
+                                        name: 'Domestic value added',
+                                        type: 'bar',
+                                        data: [1, 0, 5, 3, 2, 1, 10, 11, 4, 5, 9, 28, 77, 15, 8, 2, 17]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    </br>
+                    </br>
+                    <p style="font-size:18px">
+                        Furthermore, in computers and electronics, more than half of China’s exports come from multinational firms operating in China. This is a separate issue from domestic versus foreign value-added. The operations of multinationals in China will count as Chinese
+                        domestic-value added. But the firms earned substantial profits from these operations, and that is a benefit for the US and other foreign owners. China’s industrial policies are often aimed at building up China’s state-owned enterprises,
+                        but these firms hardly export at all.
+                    </p>
+                    </br>
+                    <p style="font-size:18px">
+                        US products are also involved in production chains. Thirty seven percent of US imports from China are intermediate products used by American firms to make themselves more competitive. Putting tariffs on intermediate products is shooting oneself in the
+                        foot
+                    </p>
+                    </br>
+                    </br>
+                    </br>
+                    <p style="font-size:40px">
+                        <b>US - Trade in Value Added and Global Value Chains</b>
+                    </p>
+                    </br>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div id="pie" style="height: 450% ; width:500%" object align="left"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("pie");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = '世界人口总量 - 条形图';
+
+                                option = {
+
+                                    title: {
+                                        text: 'US- Top export destinations(2011, % of share)',
+                                        subtext: 'Source: World Trade Organisation'
+                                    },
+
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data: ['China', 'Mexico', 'Canada']
+                                    },
+                                    series: [{
+                                        name: 'Domestic VA',
+                                        type: 'bar',
+                                        data: [85, 79.8, 82]
+                                    }, {
+                                        name: 'Foreign VA',
+                                        type: 'bar',
+                                        data: [15, 20.2, 18]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                        <div class="col-md-9">
+                            <div id="lemon" style="height: 100% ; width:600%"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("lemon");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = '世界人口总量 - 条形图';
+
+                                option = {
+                                    title: {
+                                        text: 'Top exporters of US inputs through GVCs(2011, % of share)',
+                                        subtext: 'Source: World Trade Organization'
+                                    },
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+                                    legend: {
+                                        data: ['', '']
+                                    },
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data: ['Mexico', 'Canada', 'China']
+                                    },
+                                    series: [{
+                                        name: '%',
+                                        type: 'bar',
+                                        data: [12.5, 10.3, 8.5]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    </br>
+                    </br>
+                    </br>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div id="scone" style="height: 450% ; width:500%" object align="left"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("scone");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = '世界人口总量 - 条形图';
+
+                                option = {
+
+                                    title: {
+                                        text: 'US- Top foreign inputs providers(2011, % of share)',
+                                        subtext: 'Source: World Trade Organisation'
+                                    },
+
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data: ['Mexico', 'China', 'Canada']
+                                    },
+                                    series: [{
+
+                                        name: 'Foreign VA',
+                                        type: 'bar',
+                                        data: [8.6, 10.9, 14.5]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                        <div class="col-md-9">
+                            <div id="orange" style="height: 100% ; width:600%"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("orange");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = '世界人口总量 - 条形图';
+
+                                option = {
+                                    title: {
+                                        text: 'Top foreign services providers to total exports (2011, % of share)',
+                                        subtext: 'Source: World Trade Organization'
+                                    },
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data: ['Japan', 'China', 'Canada']
+                                    },
+                                    series: [{
+                                        name: '%',
+                                        type: 'bar',
+                                        data: [0.5, 0.6, 0.8]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    </br>
+                    </br>
+                    </br>
+                    <p style="font-size: 18px">
+                        The same analysis can be applied to Chinese retaliatory tariffs. Chinese consumers will pay more for soybeans and products like pork that rely on soya beans. Chinese airlines will be less productive if they cannot buy American aircraft. It happens that
+                        these U.S. exports have mostly domestic content, so that most of the pain felt by producers will be within the United States, not in third countries.
+                    </p>
+                    </br>
+                    </br>
+                    </br>
+                    <p style="font-size:40px">
+                        <b>China - Trade in Value Added and Global Value Chains</b>
+                    </p>
+                    </br>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div id="biscuit" style="height: 450% ; width:500%" object align="left"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("biscuit");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = '世界人口总量 - 条形图';
+
+                                option = {
+
+                                    title: {
+                                        text: 'China- Top export destinations(2011, % of share)',
+                                        subtext: 'Source: World Trade Organisation'
+                                    },
+
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data: ['South Korea', 'Japan', 'US']
+                                    },
+                                    series: [{
+                                        name: 'Domestic VA',
+                                        type: 'bar',
+                                        data: [67.7, 68.1, 65.3]
+                                    }, {
+                                        name: 'Foreign VA',
+                                        type: 'bar',
+                                        data: [32.3, 31.9, 34.7]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                        <div class="col-md-9">
+                            <div id="grape" style="height: 100% ; width:600%"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("grape");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = '世界人口总量 - 条形图';
+
+                                option = {
+                                    title: {
+                                        text: 'Top exporters of China inputs through GVCs(2011, % of share)',
+                                        subtext: 'Source: World Trade Organization'
+                                    },
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+                                    legend: {
+                                        data: ['', '']
+                                    },
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data: ['Japan', 'South Korea', 'US']
+                                    },
+                                    series: [{
+                                        name: '%',
+                                        type: 'bar',
+                                        data: [6.3, 9.6, 10.1]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    </br>
+                    </br>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div id="cookie" style="height: 450% ; width:500%" object align="left"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("cookie");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = '世界人口总量 - 条形图';
+
+                                option = {
+
+                                    title: {
+                                        text: 'China- Top foreign inputs providers(2011, % of share)',
+                                        subtext: 'Source: World Trade Organisation'
+                                    },
+
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data: ['South Korea', 'US', 'Japan']
+                                    },
+                                    series: [{
+
+                                        name: 'Foreign VA',
+                                        type: 'bar',
+                                        data: [8.3, 9.4, 14.7]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                        <div class="col-md-9">
+                            <div id="muffin" style="height: 100% ; width:600%"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("muffin");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = '世界人口总量 - 条形图';
+
+                                option = {
+                                    title: {
+                                        text: 'Top foreign services providers to total exports (2011, % of share)',
+                                        subtext: 'Source: World Trade Organization'
+                                    },
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data: ['South Korea', 'US', 'Japan']
+                                    },
+                                    series: [{
+                                        name: '%',
+                                        type: 'bar',
+                                        data: [1.1, 1.5, 2.3]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    </br>
+                    </br>
+                    <p style="font-size: 18px">
+                        Overall, tariffs will be the wrong instrument to address sino-China war issues. Tariffs will cause a lot of unnecessary pain for consumers and third countries, not to mention American firms caught in the crossfire.
+                    </p>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    <p style="font-size: 40px">
+                        <b>
+                        How many products have been labelled as “made in China” in the US so far?
+                       </b>
+                    </p>
+                    </br>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div id="cream" style="height: 450% ; width:550%"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("cream");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                option = {
+                                    title: {
+                                        text: 'Import content of US PCE* (2000 - 10, %)',
+                                    },
+                                    tooltip: {
+                                        trigger: 'axis'
+                                    },
+                                    legend: {
+                                        data: ['Total', 'China'],
+                                        x: "right"
+                                    },
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+
+                                    xAxis: {
+                                        type: 'category',
+                                        boundaryGap: false,
+                                        data: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010']
+                                    },
+                                    yAxis: {
+                                        type: 'value'
+                                    },
+                                    series: [
+
+                                        {
+                                            name: 'China',
+                                            type: 'line',
+                                            stack: '总量',
+                                            data: [0.8, 0.8, 1.2, 1.4, 1.5, 1.8, 1.9, 1.9, 1.95, 1.95, 1.95]
+                                        }, {
+                                            name: 'Total',
+                                            type: 'line',
+                                            stack: '总量',
+                                            data: [12.2, 12, 12, 12.2, 13, 13.8, 13.9, 13.9, 14, 13.7, 13.95]
+                                        }
+                                    ]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                        <div class="col-md-9">
+                            <div id="punch" style="height: 105% ; width: 560%"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("punch");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = '环形图';
+
+                                option = {
+
+                                    title: {
+                                        text: 'Geography of US PCE (2010, %)',
+                                        subtext: 'Source: Bureau of Economic Analysis'
+                                    },
+
+                                    tooltip: {
+                                        trigger: 'item',
+                                        formatter: "{a} <br/>{b}: {c} ({d}%)"
+                                    },
+
+                                    legend: {
+                                        orient: 'vertical',
+                                        x: 'right',
+                                        data: ['Made in US from US parts', 'Final goods imported from other countries', 'Made in US from parts imported from other countries', 'US Content of "Made in other countries"', 'Grain, seeds and straw', 'US Content of "Made in China"', 'Final goods imported from China'],
+                                        position: 'right'
+                                    },
+
+                                    series: [{
+                                        name: '访问来源',
+                                        type: 'pie',
+                                        radius: ['50%', '70%'],
+                                        avoidLabelOverlap: false,
+                                        label: {
+                                            normal: {
+                                                show: false,
+                                                position: 'center'
+                                            },
+                                            emphasis: {
+                                                show: true,
+                                                textStyle: {
+                                                    fontSize: '30',
+                                                    fontWeight: 'bold'
+                                                }
+                                            }
+                                        },
+                                        labelLine: {
+                                            normal: {
+                                                show: false
+                                            }
+                                        },
+                                        data: [{
+                                            value: 81.9,
+                                            name: 'Made in US from US parts'
+                                        }, {
+                                            value: 6.1,
+                                            name: 'Final goods imported from other countries'
+                                        }, {
+                                            value: 5.9,
+                                            name: 'Made in US from parts imported from other countries'
+                                        }, {
+                                            value: 2.7,
+                                            name: 'US Content of "Made in other countries"'
+                                        }, {
+                                            value: 1.5,
+                                            name: 'US Content of "Made in China"'
+                                        }, {
+                                            value: 1.2,
+                                            name: 'Final goods imported from China'
+                                        }]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    </br>
+                    * PCE = Personal Consumption Expenditure
+                    </br>
+                    </br>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p style="font-size: 18px">
+                                The total share of PCE that goes for goods and services imported from China is 1.9%. This is 0.7 percentage point more than the share of Chinese-produced final goods and services in PCE. This difference is mainly due to the use of intermediate goods imported
+                                from China in the U.S. production of services.
+                            </p>
+                            </br>
+                            <p style="font-size: 18px">
+                                Figure on the left above plots the total and Chinese import content of U.S. PCE over the past decade. The import content of PCE has been relatively constant at between 11.7% and 14.2%. Import content peaked in 2008 at 14.2%, which was probably due to
+                                the spike in oil prices at the time. The share of imports in PCE is slightly lower than in GDP as a whole because the import content of investment goods turns out to be twice as high as that of consumer goods and services.
+                            </p>
+                            </br>
+                            <p style="font-size: 18px">
+                                The fraction of import content attributable to Chinese imports has doubled over the past decade. In 2000, Chinese goods accounted for 0.9% of the content of PCE. In 2010, Chinese goods accounted for 1.9%. The fact that the overall import content of U.S.
+                                consumer goods has remained relatively constant while the Chinese share has doubled indicates that Chinese gains have come, in large part, at the expense of other exporting nations.
+                            </p>
+                            </br>
+                            <p style="font-size: 18px">
+                                The import content of U.S. PCE attributable to imports from China is useful in understanding where revenue generated by sales to U.S. households flows. It is also important because it affects to what extent price increases for Chinese goods are likely
+                                to pass through to U.S. consumer prices.
+                            </p>
+                        </div>
+                        <div class="col-md-9">
+                            <p style="font-size: 18px">
+                                The graph on the right shows the share of U.S. PCE based on where goods were produced, taking into account intermediate goods production, and the domestic and foreign content of imports. Of the 2.7% of U.S. consumer purchases going to goods labeled “Made
+                                in China,” only 1.2% actually represents China-produced content. If we take into account imported intermediate goods, about 13.9% of U.S. consumer spending is attributable to imports, including 1.9% imported from China.
+                            </p>
+                            </br>
+                            <p style="font-size: 18px">
+                                Since the share of PCE attributable to imports from China is less than 2% and some of this can be traced to production in other countries, it is unlikely that recent increases in labor costs and inflation in China will generate broad-based inflationary
+                                pressures in the United States.
+                            </p>
+                        </div>
+                    </div>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    <p style="font-size: 40px">
+                        <b>What side effects are brought by the trade war to the US?</b>
+                    </p>
+                    </br>
+                    <p style="font-size: 18px">
+                        <b>Value of Sino-US Relationship to the US (2015)</b>
+                    </p>
+                    </br>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div id="butter" style="height: 460% ; width:600%"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("butter");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = '嵌套环形图';
+
+                                option = {
+
+                                    title: {
+                                        text: 'Gains to US employment (2015, USD thousand)',
+                                        subtext: 'Source: Oxford Economics Calculation'
+                                    },
+
+                                    tooltip: {
+                                        trigger: 'item',
+                                        formatter: "{a} <br/>{b}: {c} ({d}%)"
+                                    },
+                                    legend: {
+                                        orient: 'vertical',
+                                        x: 'right',
+                                        data: ['Inward FDI from China', 'Indirects exports to China', 'Income from outward FDI', 'Direct exports to China']
+                                    },
+                                    series: [{
+                                        name: '访问来源',
+                                        type: 'pie',
+                                        selectedMode: 'single',
+                                        radius: [0, '50%'],
+
+                                        label: {
+                                            normal: {
+                                                position: 'inner'
+                                            }
+                                        },
+                                        labelLine: {
+                                            normal: {
+                                                show: false
+                                            }
+                                        },
+                                        data: [{
+                                            value: 104,
+                                            name: 'Inward FDI from China',
+                                            selected: true
+                                        }, {
+                                            value: 296,
+                                            name: 'Indirects exports to China',
+                                            selected: true
+                                        }, {
+                                            value: 688,
+                                            name: 'Income from outward FDI',
+                                            selected: true
+                                        }, {
+                                            value: 1467,
+                                            name: 'Direct exports to China',
+                                            selected: true
+                                        }]
+                                    }, {
+                                        name: '',
+                                        type: 'pie',
+                                        radius: ['60%', '75%'],
+                                        label: {
+                                            normal: {
+                                                formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                                                backgroundColor: '#eee',
+                                                borderColor: '#aaa',
+                                                borderWidth: 1,
+                                                borderRadius: 4,
+                                                // shadowBlur:3,
+                                                // shadowOffsetX: 2,
+                                                // shadowOffsetY: 2,
+                                                // shadowColor: '#999',
+                                                // padding: [0, 7],
+                                                rich: {
+                                                    a: {
+                                                        color: '#999',
+                                                        lineHeight: 22,
+                                                        align: 'center'
+                                                    },
+                                                    // abg: {
+                                                    //     backgroundColor: '#333',
+                                                    //     width: '100%',
+                                                    //     align: 'right',
+                                                    //     height: 22,
+                                                    //     borderRadius: [4, 4, 0, 0]
+                                                    // },
+                                                    hr: {
+                                                        borderColor: '#aaa',
+                                                        width: '100%',
+                                                        borderWidth: 0.5,
+                                                        height: 0
+                                                    },
+                                                    b: {
+                                                        fontSize: 16,
+                                                        lineHeight: 33
+                                                    },
+                                                    per: {
+                                                        color: '#eee',
+                                                        backgroundColor: '#334455',
+                                                        padding: [2, 4],
+                                                        borderRadius: 2
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        data: [{
+                                                value: 2555,
+                                                name: 'Total'
+                                            }
+
+                                        ]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                        <div class="col-md-9">
+                            <div id="chip" style="height: 100% ; width:580%"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("chip");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = '世界人口总量 - 条形图';
+
+                                option = {
+                                    title: {
+                                        text: 'Boost to US GDP (2015, %)',
+                                        subtext: 'Source: Oxford Economics Calculation'
+                                    },
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+                                    legend: {
+                                        data: ['']
+                                    },
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data: ['Inward FDI from China', 'Income from outward FDI', 'Indirect exports to China*', 'Direct exports to China', 'Overall']
+                                    },
+                                    series: [{
+                                        name: '',
+                                        type: 'bar',
+                                        data: [0.1, 0.3, 0.2, 0.7, 1.2]
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    </br>
+                    <p style="font-size: 18px">
+                        * Indirect exports are defined as exports from the United States to other Asian countries that are re-exported to China
+                    </p>
+                    </br>
+                    </br>
+
+                    <p style="font-size: 18px">
+                        <b>a. Possible increase of unemployment in the US (after the trade war) </b>
+                    </p>
+                    <p style="font-size: 18px">
+                        For many years, US farmers have been major beneficiaries of the expanding demand for foodstuffs in China, supplying soybeans, pork products, and wheat. Recently, China has also become an important market for highly sophisticated and relatively expensive
+                        products like airplanes and pharmaceuticals—sectors where American know-how leads the world.
+                    </p>
+                    </br>
+                    </br>
+                    <p style="font-size:18px">
+                        <b>
+                            b. China's growing middle class is a growth market for US businesses
+                        </b>
+                    </p>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div id="vex" style="height: 450% ; width:500%" object align="left"></div>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("vex");
+                                var myChart = echarts.init(dom);
+                                var app = {};
+                                option = null;
+                                app.title = '世界人口总量 - 条形图';
+
+                                option = {
+                                    title: {
+                                        text: 'Households with income over USD 35,000',
+                                        subtext: 'Source: Oxford Economics'
+                                    },
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+                                    legend: {
+                                        data: ['2011年', '2012年']
+                                    },
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data: ['Turkey', 'Russia', 'Indonesia', 'India', 'Brazil', 'China']
+                                    },
+                                    series: [{
+                                        name: '2015',
+                                        type: 'bar',
+                                        data: [5000, 2600, 2500, 5000, 10000, 40000],
+
+                                    }, {
+                                        name: '2025',
+                                        type: 'bar',
+                                        data: [18000, 18000, 18000, 22000, 12000, 160000],
+                                        markPoint: {}
+                                    }]
+                                };;
+                                if (option && typeof option === "object") {
+                                    myChart.setOption(option, true);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    </br>
+                    </br>
+                    <p style="font-size: 18px">
+                        As underlying wage rates rise, land prices become more costly, and the supply of Chinese labor is no longer limitless, a transformation is taking place that is likely to boost the fortunes of US exporters. Rising costs in China and falling domestic energy
+                        prices resulting from the US shale oil and natural gas revolution are helping American manufacturers become increasingly competitive with their Chinese counterparts.
+                    </p>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    <p style="font-size: 40px">
+                        <b>What side effects are brought by the trade war to the US?</b>
+                    </p>
+                    </br>
+
+                    <p style="font-size: 18px">
+                        <b> a. The pork industry in China</b>
+                    </p>
+                    Since April 2018, China has slapped tariffs on $3 billion worth of US imports, including pork products, is a blow to Virginia-based Smithfeld Foods, which has been acquired by China's WH Group since 2013. In other words, China's tariffs imposed on the
+                    America's pork company is in fact hurting China's pork market.
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    <p style="font-size: 40px">
+                        <b>US's retaliation against China's retaliation?</b>
+                    </p>
+                    </br>
+                    <p style="font-size: 18px">
+
+                        If the 10 percent tariffs went into effect and China retaliated with more measures, Trump would be respond by identifying another US$ 200 billion worth of Chinese imports goods for extra tariffs
+
+                    </p>
+                    <!-- Scripts -->
+                    <script src="assets/js/jquery.min.js">
+                    </script>
+                    <script src="assets/js/browser.min.js "></script>
+                    <script src="assets/js/breakpoints.min.js "></script>
+                    <script src="assets/js/util.js "></script>
+                    <script src="assets/js/main.js "></script>
+
+                </body>
+
+</html>
