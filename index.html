@@ -15,25 +15,6 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <!-- 引入 echarts.js -->
     <script src="echarts.min.js"></script>
-    <script src="angular.js"></script>
-    <script src="angular.min.js"></script>
-    <!-- Angualr js script for body map -->
-    <script>
-        var dBexampleApp = angular.module('dBexampleApp', []).controller('dBcontroller', function($scope) {
-            $scope.AngdB = 0;
-
-            $scope.getAngdB = function() {
-                return $scope.AngdB;
-            };
-            $scope.dBchange = function() {
-                $scope.AngdB = parseInt($scope.AngdB);
-            }
-        });
-    </script>
-    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
-    <style type="text/css">
-        /* No style rules here yet */
-    </style>
 </head>
 
 <body class="is-preload">
@@ -65,7 +46,7 @@
                 <p></p>
             </center>
         </div>
-        <img src="Sino-US.jpg" alt="" />
+        <video autoplay loop muted playsinline src="images/banner.mp4"></video>
     </section>
 
     <div class="container">
