@@ -1,4 +1,4 @@
-# Sino-US-Trade-War
+# Sino-US Trade War -- Data Viz
 
 ## Description
 Data Visualization of the Sino-US Trade War in 2018 - a year after the inauguration of former US president Donald Trump. 
